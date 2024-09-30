@@ -28,4 +28,7 @@ export const English = {
       { images: SVG9, title: "Contact Us" },
     ],
   },
+  header: {
+    buttonText: "Free Palestine 🇵🇸",
+  },
 };

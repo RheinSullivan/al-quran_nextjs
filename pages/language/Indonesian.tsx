@@ -28,4 +28,7 @@ export const Indonesian = {
       { images: SVG9, title: "Hubungi Kami" },
     ],
   },
+  header: {
+    buttonText: "Bebaskan Palestina 🇵🇸",
+  },
 };
