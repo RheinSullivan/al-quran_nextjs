@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="flex h-screen bg-dark">
       <Navbar language={language} />
-      <div className="flex-1 flex flex-row">
+      <div className="flex-1 flex flex-col">
         <Header onLanguageChange={setLanguage} />
         <main className="flex-grow flex items-center justify-center">
           <Component {...pageProps} />
