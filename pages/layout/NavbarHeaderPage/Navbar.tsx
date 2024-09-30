@@ -30,7 +30,7 @@ export default function Navbar({ language }: { language: string }) {
   }, [navRef]);
 
   return (
-    <nav ref={navRef} className={`${open ? "w-72 backdrop-blur-sm bg-dark2/50" : "w-16 md:w-20 bg-dark2 relative"} z-10 fixed h-screen p-5 pt-8 duration-300`}>
+    <nav ref={navRef} className={`${open ? "w-72 backdrop-blur-sm bg-dark2/50" : "w-16 md:w-20 bg-dark2"} z-20 fixed h-screen p-5 pt-8 duration-300`}>
       <RiArrowLeftSLine
         onClick={() => setOpen(!open)}
         className={`${!open && "rotate-180"} ${open ? "bg-dark2/50 border-none backdrop-blur-sm" : "bg-dark2"} text-white text-3xl rounded-full absolute -right-3 top-7 border border-dark2 cursor-pointer`}

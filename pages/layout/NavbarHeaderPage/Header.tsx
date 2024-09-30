@@ -16,15 +16,15 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-transparent py-3 px-6 flex justify-between items-center shadow">
-      <div className="flex items-center">
+    <header className="fixed top-0 left-0 w-full bg-transparent py-3 px-6 z-10 flex justify-between items-center shadow">
+      <div className="flex items-center pl-20">
         <Image src={Logo} alt="Logo Al-Qur'an Online" className="w-[50px] md:w-[70px] mr-3" />
         <div className="text-white">
           <h1 className="text-lg md:text-xl font-semibold">Al-Qur&apos;an</h1>
           <span className="text-sm md:text-base">Online</span>
         </div>
       </div>
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center space-x-3 pr-14">
         <a href="#" className="bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-green-800 hover:text-white">
           {language === "en" ? English.header.buttonText : Indonesian.header.buttonText}
         </a>

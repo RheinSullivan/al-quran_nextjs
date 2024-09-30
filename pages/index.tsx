@@ -9,7 +9,7 @@ const ebGaramond = EB_Garamond({
 
 export default function IndexPage() {
   return (
-    <div className={`flex h-full w-full items-center justify-center text-center border ${ebGaramond.variable}`}>
+    <div className={`flex h-full w-full items-center justify-center text-center border mt-24 ${ebGaramond.variable}`}>
       <h1 className="text-white text-2xl md:text-4xl">
         ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ <br />
         Ya
