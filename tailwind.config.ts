@@ -10,6 +10,9 @@ const config: Config = {
         dark: "#081a51",
         dark2: "#000822",
       },
+      backgroundImage: {
+        kabah: "url('/assets/img/kabah.jpg')",
+      },
     },
   },
   plugins: [],

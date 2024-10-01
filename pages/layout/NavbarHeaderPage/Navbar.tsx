@@ -30,11 +30,8 @@ export default function Navbar({ language }: { language: string }) {
   }, [navRef]);
 
   return (
-    <nav ref={navRef} className={`${open ? "w-72 backdrop-blur-sm bg-dark2/50" : "w-16 md:w-20 bg-dark2"} z-20 fixed h-screen p-5 pt-8 duration-300`}>
-      <RiArrowLeftSLine
-        onClick={() => setOpen(!open)}
-        className={`${!open && "rotate-180"} ${open ? "bg-dark2/50 border-none backdrop-blur-sm" : "bg-dark2"} text-white text-3xl rounded-full absolute -right-3 top-7 border border-dark2 cursor-pointer`}
-      />
+    <nav ref={navRef} className={`${open ? "w-72" : "w-16 md:w-20"} z-20 bg-dark2 fixed h-screen p-5 pt-8 duration-300`}>
+      <RiArrowLeftSLine onClick={() => setOpen(!open)} className={`${!open && "rotate-180"} bg-dark2 text-white text-3xl rounded-full absolute -right-3 top-7 border border-dark2 cursor-pointer`} />
       <div className="inline-flex items-center">
         {/* Image & Text Logo Navbar */}
         <Image src={SVG1} alt="Logo Cover Al-Qur'an" className={`${open ? "justify-start ml-0" : "justify-center -ml-3 md:-ml-[11px]"} w-12 md:w-16 duration-300 text-4xl rounded cursor-pointer float-left`} />
@@ -43,7 +40,7 @@ export default function Navbar({ language }: { language: string }) {
           <span className="text-[10px] md:text-xs">{language === "en" ? English.navbar.tagline : Indonesian.navbar.tagline}</span>
         </h1>
       </div>
-      <div className={`${!open ? "hidden" : "flex"} items-center mt-5 px-4 py-2 rounded-md bg-dark2/60`}>
+      <div className={`${!open ? "hidden" : "flex"} items-center mt-5 px-4 py-2 rounded-md bg-dark`}>
         <BiSearchAlt2 className="text-white text-lg float-left cursor-pointer mr-2 block" />
         <input type={"search"} placeholder="Search" className="text-xs md:text-base bg-transparent w-full text-white focus:outline-none" />
       </div>

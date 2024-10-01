@@ -16,7 +16,7 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-transparent py-3 px-6 z-10 flex justify-between items-center shadow">
+    <header className="fixed top-0 left-0 w-full bg-transparent backdrop-blur py-3 px-6 z-10 flex justify-between items-center shadow">
       <div className="flex items-center pl-20">
         <Image src={Logo} alt="Logo Al-Qur'an Online" className="w-[50px] md:w-[70px] mr-3" />
         <div className="text-white">
@@ -24,7 +24,7 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
           <span className="text-sm md:text-base">Online</span>
         </div>
       </div>
-      <div className="flex items-center space-x-3 pr-14">
+      <div className="hidden md:flex items-center space-x-3 pr-14">
         <a href="#" className="bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-green-800 hover:text-white">
           {language === "en" ? English.header.buttonText : Indonesian.header.buttonText}
         </a>
@@ -34,7 +34,7 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
             <BsChevronDown className={`ml-2 transform ${submenuOpen ? "rotate-180" : ""}`} />
           </button>
           {submenuOpen && (
-            <ul className="absolute right-0 mt-2 w-40 bg-transparent bg-gray-200 rounded-md text-black overflow-hidden z-10">
+            <ul className="absolute right-0 mt-2 w-40 bg-transparent bg-gray-300 rounded-md text-black overflow-hidden z-10">
               <li className="px-4 py-2 hover:bg-dark2 hover:text-white cursor-pointer" onClick={() => handleLanguageChange({ target: { value: "en" } } as React.ChangeEvent<HTMLSelectElement>)}>
                 English
               </li>
