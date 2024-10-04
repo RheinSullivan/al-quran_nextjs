@@ -11,7 +11,7 @@ import SVG9 from "@/public/assets/svg/10.svg";
 export const Indonesian = {
   navbar: {
     logoText: "Al-Qur'an",
-    tagline: "Online by : 7TogkID",
+    tagline: "Ar-Rizky",
     menu: [
       { images: SVG2, title: "Beranda" },
       { images: SVG3, title: "Baca Al-Qur'an" },
@@ -30,5 +30,12 @@ export const Indonesian = {
   },
   header: {
     buttonText: "Bebaskan Palestina 🇵🇸",
+  },
+  index: {
+    subTitle: "Sudahkah hari ini kamu membaca Al-Qur'an?",
+    buttonTitle: "Baca Al-Qur'an mu",
+  },
+  navbarSurah: {
+    title: "Daftar Surat",
   },
 };

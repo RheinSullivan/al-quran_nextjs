@@ -1,4 +1,4 @@
-// pages/language/English.tsx
+// SVG untuk di menu navbar
 import SVG2 from "@/public/assets/svg/8.svg";
 import SVG3 from "@/public/assets/svg/2.svg";
 import SVG4 from "@/public/assets/svg/4.svg";
@@ -11,7 +11,7 @@ import SVG9 from "@/public/assets/svg/10.svg";
 export const English = {
   navbar: {
     logoText: "Al-Qur'an",
-    tagline: "Online by : 7TogkID",
+    tagline: "Ar-Rizky",
     menu: [
       { images: SVG2, title: "Home" },
       { images: SVG3, title: "Read Al-Qur'an" },
@@ -30,5 +30,12 @@ export const English = {
   },
   header: {
     buttonText: "Free Palestine 🇵🇸",
+  },
+  index: {
+    subTitle: "Have you read the Al-Qur'an today?",
+    buttonTitle: "Read your Al-Qur'an",
+  },
+  navbarSurah: {
+    title: "Mail List",
   },
 };
