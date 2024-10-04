@@ -3,8 +3,8 @@ import Image from "next/image";
 import Logo from "@/public/assets/svg/1.svg";
 import { RiMenu4Fill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
-import { English } from "@/pages/language/English";
-import { Indonesian } from "@/pages/language/Indonesian";
+import { English } from "@/language/English";
+import { Indonesian } from "@/language/Indonesian";
 import Link from "next/link";
 
 type Surah = {

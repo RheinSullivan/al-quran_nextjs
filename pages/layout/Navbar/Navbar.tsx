@@ -4,8 +4,8 @@ import { RiArrowLeftSLine } from "react-icons/ri";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { BsChevronDown } from "react-icons/bs";
 // Change Language
-import { English } from "@/pages/language/English";
-import { Indonesian } from "@/pages/language/Indonesian";
+import { English } from "@/language/English";
+import { Indonesian } from "@/language/Indonesian";
 // ImageSVG Components
 import Logo from "@/public/assets/svg/1.svg";
 

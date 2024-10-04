@@ -47,19 +47,19 @@ export default function Surah({ nomorSurah }: SurahProps) {
   return (
     <div className="mx-5 md:mx-24 pl-14 md:pl-10">
       <div className="pt-32 pb-10">
-        <div className="bg-kabah2 p-6 bg-center text-white text-outline rounded-xl bg-no-repeat bg-cover">
+        <div className="bg-kabah2 p-7 bg-center text-white text-outline rounded-xl bg-no-repeat bg-cover">
           <h2 className="text-xl md:text-4xl">
             {surah.nama} <br />
             <span className="text-base">{surah.arti}</span>
           </h2>
-          <h3 className="mt-1 md:mt-2 text-sm md:text-base">
+          <h3 className=" text-sm md:text-base">
             {surah.tempatTurun} - {surah.jumlahAyat} Ayat
           </h3>
           <h5 className="text-2xl md:text-5xl text-white text-center mt-6 md:mt-8 pb-8">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h5>
-          <audio src={surah.audioFull[Object.keys(surah.audioFull)[0]]} controls className="w-full mt-6 md:mt-9 bg-dark rounded-md"></audio>
+          <audio src={surah.audioFull[Object.keys(surah.audioFull)[0]]} controls className="w-full mt-6 md:mt-9 bg-transparent rounded-md"></audio>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4 mt-8 space-y-3 text-white">
+      <div className="grid grid-cols-1 gap-4 mt-5 space-y-3 h-64 overflow-y-scroll text-white">
         {surah.ayat.map((ayat) => (
           <div key={ayat.nomorAyat} className="flex flex-col p-10 bg-dark rounded-xl">
             <div className="flex justify-evenly items-center w-full pb-16">

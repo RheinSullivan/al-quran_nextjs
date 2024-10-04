@@ -1,6 +1,6 @@
 import { EB_Garamond } from "next/font/google";
-import { English } from "@/pages/language/English";
-import { Indonesian } from "@/pages/language/Indonesian";
+import { English } from "@/language/English";
+import { Indonesian } from "@/language/Indonesian";
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],

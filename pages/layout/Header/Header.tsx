@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Logo from "@/public/assets/svg/1.svg";
 import { BsChevronDown } from "react-icons/bs";
-import { English } from "@/pages/language/English";
-import { Indonesian } from "@/pages/language/Indonesian";
+import { English } from "@/language/English";
+import { Indonesian } from "@/language/Indonesian";
 
 export default function Header({ onLanguageChange }: { onLanguageChange: (language: string) => void }) {
   const [language, setLanguage] = useState("en");

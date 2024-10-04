@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Logo from "@/public/assets/svg/1.svg";
 import { BsBoxArrowLeft, BsChevronDown } from "react-icons/bs";
-import { English } from "@/pages/language/English";
-import { Indonesian } from "@/pages/language/Indonesian";
+import { English } from "@/language/English";
+import { Indonesian } from "@/language/Indonesian";
 
 type Surah = {
   nomor: number;
