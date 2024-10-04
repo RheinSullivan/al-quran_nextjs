@@ -49,7 +49,7 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
       <div className="flex items-center pl-20 md:pl-28">
         <Image src={Logo} alt="Logo Al-Qur'an" className="w-[45px] md:w-[70px] mr-3" />
         <div className="text-white">
-          <h1 className="text-sm md:text-xl font-semibold">Al-Qur&apos;an</h1>
+          <h1 className="text-sm md:text-xl font-semibold">Al-Qur&apos;an (Beta version)</h1>
           <span className="text-xs md:text-sm">Az-Zahra</span>
         </div>
       </div>
