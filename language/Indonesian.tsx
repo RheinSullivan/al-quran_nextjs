@@ -10,7 +10,7 @@ import SVG9 from "@/public/assets/svg/10.svg";
 
 export const Indonesian = {
   navbar: {
-    logoText: "Al-Qur'an",
+    logoText: "Al-Qur'an (Beta)",
     tagline: "Ar-Rizky",
     menu: [
       { images: SVG2, title: "Beranda" },
