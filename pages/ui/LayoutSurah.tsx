@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Surah from "@/pages/ui/DetailSurah/Surah";
 import Navbar from "@/pages/ui/Navbar/Navbar";
-import Header from "./Header/Header";
+import Header from "../../components/detail/Header";
 
 interface LayoutSurahProps {
   nomorSurah: number;
