@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import Surah from "../ui/DetailSurah/Surah";
+import Surah from "../../src/DetailSurah/Ayat.tsx/Surah";
 
 const SurahPage = () => {
   const router = useRouter();

@@ -3,10 +3,8 @@ import Image from "next/image";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { BsChevronDown } from "react-icons/bs";
-// Change Language
 import { English } from "@/language/English";
 import { Indonesian } from "@/language/Indonesian";
-// ImageSVG Components
 import Logo from "@/public/assets/svg/1.svg";
 
 export default function Navbar({ language }: { language: string }) {
@@ -28,12 +26,18 @@ export default function Navbar({ language }: { language: string }) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [navRef]);
+  const handleScroll = (event: React.MouseEvent<HTMLLIElement>, href: string) => {
+    event.preventDefault();
+    const section = document.getElementById(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav ref={navRef} className={`${open ? "w-60 md:w-72" : "w-16 md:w-20"} z-20 bg-dark fixed h-screen p-5 pt-8 duration-300`}>
       <RiArrowLeftSLine onClick={() => setOpen(!open)} className={`${!open && "rotate-180"} bg-dark text-white text-3xl rounded-full absolute -right-3 top-4 border border-dark cursor-pointer`} />
       <div className="inline-flex items-center">
-        {/* Image & Text Logo Navbar */}
         <Image src={Logo} alt="Logo Cover Al-Qur'an" className={`${open ? "justify-start ml-0" : "justify-center -ml-3 md:-ml-[11px]"} w-12 md:w-16 duration-300 text-4xl rounded cursor-pointer float-left`} />
         <h1 className={`${!open ? "scale-0" : ""} text-white origin-left font-medium md:text-xl duration-300 ml-2`}>
           {language === "en" ? English.navbar.logoText : Indonesian.navbar.logoText} <br />
@@ -44,16 +48,18 @@ export default function Navbar({ language }: { language: string }) {
         <BiSearchAlt2 className="text-white text-lg float-left cursor-pointer mr-2 block" />
         <input type={"search"} placeholder="Search" className="text-xs md:text-base bg-transparent w-full text-white focus:outline-none" />
       </div>
-      {/* Submenu Navbar */}
       <div className="pt-3 text-xs md:text-base">
         <ul>
           {menuNav.map((menu, index) => (
             <React.Fragment key={index}>
-              <li className={`${menu.spacing ? "mt-9" : "mt-5 md:mt-3"} md:p-[5px] text-white flex items-center gap-x-5 cursor-pointer hover:bg-dark2 rounded-md`}>
+              <li
+                className={`${menu.spacing ? "mt-9" : "mt-5 md:mt-3"} md:p-[5px] text-white flex items-center gap-x-5 cursor-pointer hover:bg-dark2 rounded-md`}
+                onClick={(e) => handleScroll(e as React.MouseEvent<HTMLLIElement>, menu.href)}
+              >
                 <span className="block float-left">
                   <Image src={menu.images} alt="Icons" className={`${!open ? "w-8" : "w-10"}`} />
                 </span>
-                <span className={`${!open && "hidden"} duration-300  font-medium flex-1`}>{menu.title}</span>
+                <span className={`${!open && "hidden"} duration-300 font-medium flex-1`}>{menu.title}</span>
                 {menu.submenu && open && <BsChevronDown onClick={() => setSubmenuOpen(!submenuOpen)} className={`${submenuOpen && "rotate-180"}`} />}
               </li>
               {menu.submenu && submenuOpen && open && (

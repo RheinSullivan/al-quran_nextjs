@@ -13,19 +13,26 @@ export const English = {
     logoText: "Al-Qur'an (Beta)",
     tagline: "Ar-Rizky",
     menu: [
-      { images: SVG2, title: "Home" },
-      { images: SVG3, title: "Read Al-Qur'an" },
-      { images: SVG4, title: "Last Read", spacing: true },
+      { images: SVG2, title: "Home", href: "home" },
+      { images: SVG3, title: "Read Al-Qur'an", href: "list-al-qur'an" },
+      { images: SVG4, title: "Last Read", href: "bookmarks", spacing: true },
       {
         images: SVG5,
         title: "Prayer Times",
+        href: "shalat-times",
         submenu: true,
-        submenuItems: [{ title: "Shalat Fajr" }, { title: "Shalat Dhuhr" }, { title: "Shalat Asr" }, { title: "Shalat Maghrib" }, { title: "Shalat Isha" }],
+        submenuItems: [
+          { href: "fajr", title: "Shalat Fajr" },
+          { href: "dhuhr", title: "Shalat Dhuhr" },
+          { href: "asr", title: "Shalat Asr" },
+          { href: "maghrib", title: "Shalat Maghrib" },
+          { href: "isha", title: "Shalat Isha" },
+        ],
       },
-      { images: SVG6, title: "Dhikr & Shalawat" },
-      { images: SVG7, title: "Infaq & Sadaqah" },
-      { images: SVG8, title: "Settings", spacing: true },
-      { images: SVG9, title: "Contact Us" },
+      { images: SVG6, title: "Dhikr & Shalawat", href: "d&s" },
+      { images: SVG7, title: "Infaq & Sadaqah", href: "i&s" },
+      { images: SVG8, title: "Settings", spacing: true, href: "settings" },
+      { images: SVG9, title: "Contact Us", href: "contact" },
     ],
   },
   header: {
@@ -37,5 +44,10 @@ export const English = {
   },
   navbarSurah: {
     title: "Mail List",
+  },
+  bookmarks: {
+    title: "Still Empty",
+    subTitle: "There is no verse you read, let's open your Qur'an, and read with me",
+    buttonText: "Last Read",
   },
 };

@@ -47,7 +47,7 @@ export default function AlQuran() {
   };
 
   return (
-    <section className="pt-32 pb-10 bg-dark2 text-white" id="al-qur'an">
+    <section className="pt-32 pb-10 text-white" id="list-al-qur'an">
       <div className="grid grid-cols-1 pl-14 mx-6 md:mx-20 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {allSurah.slice(0, page * itemsPerPage).map((surah) => (
           <div key={surah.nomor} className="p-4 bg-dark border border-gray-600 rounded-xl flex flex-col group">
@@ -58,7 +58,7 @@ export default function AlQuran() {
               <AiOutlineHeart className="text-red text-2xl" />
             </div>
             <div className="flex my-3 md:my-10 justify-end pr-5 text-end">
-              <h1 className="text-3xl md:text-4xl font-bold">{surah.nama}</h1>
+              <h1 className="text-3xl mdz:text-4xl font-bold">{surah.nama}</h1>
             </div>
             <Link href={`/surat/${surah.nomor}`} className="cursor-pointer">
               <h1 className="text-lg md:text-xl font-bold pb-1 italic group-hover:text-green-500">{surah.namaLatin}</h1>
@@ -67,7 +67,7 @@ export default function AlQuran() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center md:text-xl pl-14 md:pl-0 mt-10">
+      <div className="flex justify-center md:text-xl pl-14 md:pl-0 mt-16">
         {loading ? (
           <button disabled className="bg-sky-500 px-4 py-2 rounded-md">
             Loading...
