@@ -94,7 +94,7 @@ export default function Surah({ nomorSurah }: SurahProps) {
           <audio src={surah.audioFull[Object.keys(surah.audioFull)[0]]} controls className="w-full mt-6 md:mt-9 bg-transparent rounded-md"></audio>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4 mt-5 space-y-3 md:h-[450px] overflow-y-scroll text-white">
+      <div className="grid grid-cols-1 gap-4 mt-5 space-y-3 rounded-lg md:h-[500px] overflow-y-scroll text-white">
         {surah.ayat.map((ayat, index) => (
           <div
             key={ayat.nomorAyat}

@@ -65,4 +65,14 @@ export const Indonesian = {
     subTitle: "Tidak ada ayat yang kamu baca, mari buka Al-Qur'an mu, dan baca bersamaku",
     buttonText: "Terakhir dibaca",
   },
+  shalat: {
+    times: [{ title: "Shubuh" }, { title: "Dzuhur" }, { title: "Ashar" }, { title: "Maghrib" }, { title: "Magrib" }],
+    intentionArab: [
+      { subTitle: "أُصَلِّى فَرْضَ الصُّبْح رَكَعتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى" },
+      { subTitle: "اُصَلِّيْ فَرْضَ الظُّهْرِ أَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى" },
+      { subTitle: "أُصَلِّى فَرْضَ العَصْرِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى" },
+      { subTitle: "أُصَلِّى فَرْضَ المَغْرِبِ ثَلاَثَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَ" },
+      { subTitle: "أُصَلِّى فَرْضَ العِشَاء ِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى" },
+    ],
+  },
 };

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
-import { AiOutlineHeart } from "react-icons/ai";
+import { FaRegHeart, FaHeart } from "react-icons/fa6"; // Add FaHeart for pinned state
 
-type Surah = {
+export type Surah = {
   nomor: number;
   nama: string;
   namaLatin: string;
@@ -14,8 +14,10 @@ export default function AlQuran() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [isMax, setIsMax] = useState(false);
+  const [pinnedSurah, setPinnedSurah] = useState<number[]>([]); // State to store pinned Surahs
   const itemsPerPage = 9;
 
+  // Fetch all Surahs
   const fetchSurah = useCallback(async () => {
     setLoading(true);
     try {
@@ -23,14 +25,31 @@ export default function AlQuran() {
       const data = await response.json();
       setAllSurah(data.data);
     } catch (error) {
-      console.error("Failed to retrieved data", error);
+      console.error("Failed to retrieve data", error);
     }
     setLoading(false);
   }, []);
 
+  // Load pinned Surahs from localStorage
   useEffect(() => {
+    const storedPinned = localStorage.getItem("pinnedSurah");
+    if (storedPinned) {
+      setPinnedSurah(JSON.parse(storedPinned));
+    }
     fetchSurah();
   }, [fetchSurah]);
+
+  // Save pinned Surahs to localStorage
+  const savePinnedSurahs = (surahNumber: number) => {
+    let updatedPinned = [];
+    if (pinnedSurah.includes(surahNumber)) {
+      updatedPinned = pinnedSurah.filter((num) => num !== surahNumber); // Unpin if already pinned
+    } else {
+      updatedPinned = [...pinnedSurah, surahNumber]; // Pin if not already pinned
+    }
+    setPinnedSurah(updatedPinned);
+    localStorage.setItem("pinnedSurah", JSON.stringify(updatedPinned));
+  };
 
   const loadMore = () => {
     if (isMax) {
@@ -55,10 +74,13 @@ export default function AlQuran() {
               <div className="flex bg-green-600/20 rounded-full w-10 h-10 items-center justify-center text-center">
                 <p className="text-lg md:text-xl text-green-400 font-bold">{surah.nomor}.</p>
               </div>
-              <AiOutlineHeart className="text-red text-2xl" />
+              {/* Button for pinning/unpinning */}
+              <button className="text-red text-3xl md:text-4xl" onClick={() => savePinnedSurahs(surah.nomor)}>
+                {pinnedSurah.includes(surah.nomor) ? <FaHeart /> : <FaRegHeart />}
+              </button>
             </div>
             <div className="flex my-3 md:my-10 justify-end pr-5 text-end">
-              <h1 className="text-3xl mdz:text-4xl font-bold">{surah.nama}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold">{surah.nama}</h1>
             </div>
             <Link href={`/surat/${surah.nomor}`} className="cursor-pointer">
               <h1 className="text-lg md:text-xl font-bold pb-1 italic group-hover:text-green-500">{surah.namaLatin}</h1>
