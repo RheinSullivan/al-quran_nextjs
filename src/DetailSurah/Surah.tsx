@@ -109,10 +109,10 @@ export default function Surah({ nomorSurah }: SurahProps) {
                   <p className="text-sm md:text-2xl text-green-400 font-bold">{ayat.nomorAyat}.</p>
                 </div>
               </span>
-              <h2 className="text-xl md:text-3xl text-end ml-auto leading-loose tracking-wide">{ayat.teksArab}</h2>
+              <h2 className="text-2xl md:text-3xl text-end ml-auto leading-loose tracking-wide">{ayat.teksArab}</h2>
             </div>
-            <h3 className="md:text-xl italic tracking-wide to-slate-900">{ayat.teksLatin}</h3>
-            <p className="text-sm text-green-500 mt-3 mb-10 md:text-lg leading-relaxed">{ayat.teksIndonesia}</p>
+            <h3 className="md:text-2xl italic tracking-wide to-slate-900">{ayat.teksLatin}</h3>
+            <p className="text-xs text-green-500 mt-3 mb-10 md:text-lg leading-relaxed">{ayat.teksIndonesia}</p>
             <div className="flex space-x-5">
               <button className="text-red text-3xl md:text-4xl">
                 <FaRegHeart />

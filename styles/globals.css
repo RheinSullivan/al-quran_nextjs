@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html {
+  font-family: var(--font-eb-garamond);
   scroll-behavior: smooth;
 }
 :root {

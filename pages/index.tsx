@@ -1,20 +1,12 @@
-import { EB_Garamond } from "next/font/google";
 import { English } from "@/language/English";
 import { Indonesian } from "@/language/Indonesian";
 import AlQuran from "../src/components/Al-Qur'an/Al-Quran";
 import Bookmarks from "../src/components/LastRead/Bookmarks";
 
-const ebGaramond = EB_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  style: ["normal", "italic"],
-  variable: "--font-eb-garamond",
-});
-
 export default function IndexPage({ language }: { language: string }) {
   return (
     <section id="home">
-      <main className={`flex flex-col bg-kabah bg-cover bg-center backdrop-blur h-screen w-screen items-center justify-center ${ebGaramond.variable}`}>
+      <main className="flex flex-col bg-kabah bg-cover bg-center backdrop-blur h-screen w-screen items-center justify-center">
         <div className="text-center pl-14 md:pl-0 py-72 md:py-64 text-white">
           <div className="px-4 py-3 text-outline rounded-lg">
             <h1 className="text-2xl md:text-5xl">ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ</h1>
