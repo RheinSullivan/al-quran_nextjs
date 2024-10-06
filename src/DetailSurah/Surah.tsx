@@ -114,7 +114,9 @@ export default function Surah({ nomorSurah }: SurahProps) {
             <h3 className="md:text-xl italic tracking-wide to-slate-900">{ayat.teksLatin}</h3>
             <p className="text-sm text-green-500 mt-3 mb-10 md:text-lg leading-relaxed">{ayat.teksIndonesia}</p>
             <div className="flex space-x-5">
-              <FaRegHeart className="text-red text-3xl md:text-4xl" />
+              <button className="text-red text-3xl md:text-4xl">
+                <FaRegHeart />
+              </button>
               <button className="flex justify-center items-center cursor-pointer bg-dark2 rounded-full p-2 text-white text-lg md:text-2xl" onClick={() => handlePlayPause(index)}>
                 <audio
                   ref={(el) => {

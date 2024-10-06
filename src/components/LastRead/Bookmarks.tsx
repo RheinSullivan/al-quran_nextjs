@@ -44,10 +44,10 @@ export default function Bookmarks({ nomorSurah, language }: BookmarksProps) {
             {surah.ayat.slice(0, 10).map((ayat) => (
               <div key={ayat.nomorAyat} className="flex flex-col gap-5 rounded-lg p-4 bg-dark2 border border-gray-600">
                 {/* Pada bagian ini akan muncul ketika tidak ada data yang di simpan */}
-                {/* <div className="flex flex-col justify-center items-center h-full gap-2">
+                <div className="flex flex-col justify-center items-center h-full gap-2">
                   <span className="text-3xl font-bold">{language === "en" ? English.bookmarks.title : Indonesian.bookmarks.title}</span>
                   <span className="text-lg font-bold text-gray-500">{language === "en" ? English.bookmarks.subTitle : Indonesian.bookmarks.subTitle}</span>
-                </div> */}
+                </div>
                 {/* Pada bagian ini akan muncul ketika tidak ada data yang di simpan */}
                 {/* Bagian ini untuk menyimpan surat-surat yang di pin sebagai surat yang terakhir dibaca */}
                 <div className="flex flex-col md:flex-row justify-between md:items-center p-6">
