@@ -37,7 +37,7 @@ export default function Bookmarks({ nomorSurah, language }: BookmarksProps) {
   if (!surah) return <div className="text-green-500">Loading...</div>;
 
   return (
-    <section className="pt-32 pb-10 md:mx-10 pl-12 md:pl-20 text-white" id="bookmark">
+    <section className="pt-32 pb-10 md:mx-10 pl-16 text-white" id="bookmark">
       <div className="flex-1 p-4">
         <div className="container mx-auto md:max-w-screen-2xl h-full">
           <main className="w-full max-h-[1100px] bg-dark p-7 rounded-xl overflow-y-scroll space-y-4">
