@@ -74,5 +74,19 @@ export const Indonesian = {
       { subTitle: "أُصَلِّى فَرْضَ المَغْرِبِ ثَلاَثَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَ" },
       { subTitle: "أُصَلِّى فَرْضَ العِشَاء ِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى" },
     ],
+    intentionLatin: [
+      { subTitle: "Ushallii fardash-Shubhi rak’ataini mustaqbilal qiblati adaa’an lillaahi ta’aalaa." },
+      { subTitle: "Ushalli fardhazh zhuhri arba'a raka'aatin mustaqbilal qiblati adaa an lillaahi ta'aala." },
+      { subTitle: "Ushalli fardhal 'ashri arba'a raka'aatin mustaqbilal qiblati adaa an lillahi ta'aala." },
+      { subTitle: "Ushalli fardhal maghribi tsalaatsa raka'aatin mustaqbilal qiblati adaa an lillaahi ta'aala." },
+      { subTitle: "Ushalli fardhal 'isyaa i arba'a raka'aatin mustaqbilal qiblati adaa an lillaahi ta'aala." },
+    ],
+    meaning: [
+      { paragraph: "Aku berniat mengerjakan sholat fardhu subuh sebanyak dua raka’at dengan menghadap kiblat, karena Allah Ta’ala." },
+      { paragraph: "Aku berniat melakukan salat fardu zuhur empat rakaat sambil menghadap kiblat, saat ini, karena Allah ta'ala." },
+      { paragraph: "Aku berniat melakukan salat fardu ashar empat rakaat, sambil menghadap kiblat, saat ini, karena Allah ta'ala." },
+      { paragraph: "Aku berniat melakukan salat fardu maghrib tiga rakaat, sambil menghadap kiblat, saat ini, karena Allah ta'ala." },
+      { paragraph: "Aku berniat melakukan salat fardu isya empat rakaat, sambil menghadap kiblat, saat ini, karena Allah ta'ala." },
+    ],
   },
 };

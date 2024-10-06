@@ -59,5 +59,19 @@ export const English = {
       { subTitle: "أُصَلِّى فَرْضَ المَغْرِبِ ثَلاَثَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَ" },
       { subTitle: "أُصَلِّى فَرْضَ العِشَاء ِأَرْبَعَ رَكَعاَتٍ مُسْتَقْبِلَ الْقِبْلَةِ أَدَاءً لله تَعَالَى" },
     ],
+    intentionLatin: [
+      { subTitle: "Ushallii fardash-Shubhi rak’ataini mustaqbilal qiblati adaa’an lillaahi ta’aalaa." },
+      { subTitle: "Ushalli fardhazh zhuhri arba'a raka'aatin mustaqbilal qiblati adaa an lillaahi ta'aala." },
+      { subTitle: "Ushalli fardhal 'ashri arba'a raka'aatin mustaqbilal qiblati adaa an lillahi ta'aala." },
+      { subTitle: "Ushalli fardhal maghribi tsalaatsa raka'aatin mustaqbilal qiblati adaa an lillaahi ta'aala." },
+      { subTitle: "Ushalli fardhal 'isyaa i arba'a raka'aatin mustaqbilal qiblati adaa an lillaahi ta'aala." },
+    ],
+    meaning: [
+      { paragraph: "I intend to perform the obligatory Fardh prayer of Subuh/Fajr with two rak'ahs while facing the Qiblah, for the sake of Allah Ta'ala." },
+      { paragraph: "I intend to perform the obligatory Fardh prayer of Dhuhr with four rak'ahs while facing the Qiblah, at this moment, for the sake of Allah Ta'ala." },
+      { paragraph: "I intend to perform the obligatory Fardh prayer of Asr with four rak'ahs while facing the Qiblah, at this moment, for the sake of Allah Ta'ala." },
+      { paragraph: "I intend to perform the obligatory Fardh prayer of Maghrib with three rak'ahs while facing the Qiblah, at this moment, for the sake of Allah Ta'ala." },
+      { paragraph: "I intend to perform the obligatory Fardh prayer of Isha with four rak'ahs while facing the Qiblah, at this moment, for the sake of Allah Ta'ala." },
+    ],
   },
 };
