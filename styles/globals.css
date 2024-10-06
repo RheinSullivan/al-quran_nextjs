@@ -11,9 +11,7 @@ html {
   --font-eb-garamond: "EB Garamond", serif;
 }
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-eb-garamond);
+  @apply bg-dark2;
 }
 @layer utilities {
   .text-balance {
