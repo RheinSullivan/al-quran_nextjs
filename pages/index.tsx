@@ -2,6 +2,7 @@ import { English } from "@/language/English";
 import { Indonesian } from "@/language/Indonesian";
 import AlQuran from "../src/components/Al-Qur'an/Al-Quran";
 import Bookmarks from "../src/components/LastRead/Bookmarks";
+import Footer from "./layout/Footer.tsx/Footer";
 // import Shalat from "@/src/components/PrayerTimes/Shalat";
 
 export default function IndexPage({ language }: { language: string }) {
@@ -27,6 +28,9 @@ export default function IndexPage({ language }: { language: string }) {
       </main>
       <main id="bookmarks">
         <Bookmarks language={language} nomorSurah={2} />
+      </main>
+      <main>
+        <Footer />
       </main>
       {/* <main id="prayer-times">
         <Shalat language={language} />
