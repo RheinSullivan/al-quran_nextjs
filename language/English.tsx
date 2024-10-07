@@ -18,15 +18,17 @@ export const English = {
       { images: SVG4, title: "Last Read", href: "bookmarks", spacing: true },
       {
         images: SVG5,
-        title: "Prayer Times",
-        href: "shalat-times",
+        title: "Prayer Times & Guide",
         submenu: true,
         submenuItems: [
-          { href: "fajr", title: "Shalat Fajr" },
-          { href: "dhuhr", title: "Shalat Dhuhr" },
-          { href: "asr", title: "Shalat Asr" },
-          { href: "maghrib", title: "Shalat Maghrib" },
-          { href: "isha", title: "Shalat Isha" },
+          {
+            href: "shalat-times",
+            title: "Prayer Times",
+          },
+          {
+            href: "prayer-guide",
+            title: "Prayer Guide",
+          },
         ],
       },
       { images: SVG6, title: "Dhikr & Shalawat", href: "d&s" },
@@ -73,5 +75,7 @@ export const English = {
       { paragraph: "I intend to perform the obligatory Fardh prayer of Maghrib with three rak'ahs while facing the Qiblah, at this moment, for the sake of Allah Ta'ala." },
       { paragraph: "I intend to perform the obligatory Fardh prayer of Isha with four rak'ahs while facing the Qiblah, at this moment, for the sake of Allah Ta'ala." },
     ],
+    load: "Loading prayer times...",
+    buttonText: "Find Mosque",
   },
 };

@@ -1,9 +1,9 @@
 import { English } from "@/language/English";
 import { Indonesian } from "@/language/Indonesian";
-import AlQuran from "../src/components/Al-Qur'an/Al-Quran";
-import Bookmarks from "../src/components/LastRead/Bookmarks";
-import Footer from "./layout/Footer.tsx/Footer";
-// import Shalat from "@/src/components/PrayerTimes/Shalat";
+import AlQuran from "@/src/components/Al-Qur'an/Al-Quran";
+import Bookmarks from "@/src/components/LastRead/Bookmarks";
+import Footer from "@/pages/layout/Footer.tsx/Footer";
+import Shalat from "@/src/components/PrayerTimes/Shalat";
 
 export default function IndexPage({ language }: { language: string }) {
   return (
@@ -12,7 +12,7 @@ export default function IndexPage({ language }: { language: string }) {
         <div className="text-center pl-14 md:pl-0 py-72 md:py-64 text-white">
           <div className="px-4 py-3 text-outline rounded-lg">
             <h1 className="text-2xl md:text-5xl">ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ</h1>
-            <p className="md:text-xl font-semibold italic">Akhi/Ukhti</p>
+            <p className="md:text-2xl font-bold italic text-outline">Akhi/Ukhti</p>
             <h3 className="md:text-xl pt-5">{language === "en" ? English.index.subTitle : Indonesian.index.subTitle}</h3>
           </div>
           <div className="flex flex-col justify-center items-center text-sm md:text-xl">
@@ -29,12 +29,12 @@ export default function IndexPage({ language }: { language: string }) {
       <main id="bookmarks">
         <Bookmarks language={language} nomorSurah={2} />
       </main>
+      <main id="shalat-times">
+        <Shalat language={language} />
+      </main>
       <main>
         <Footer />
       </main>
-      {/* <main id="prayer-times">
-        <Shalat language={language} />
-      </main> */}
     </section>
   );
 }

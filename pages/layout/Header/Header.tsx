@@ -57,7 +57,6 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
         <a href="#" className="hidden md:flex bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-green-600 hover:text-white">
           {language === "en" ? English.header.buttonText : Indonesian.header.buttonText}
         </a>
-        {/* Button Change Language */}
         <div className="relative" ref={menuRef}>
           <button onClick={() => setSubmenuOpen(!submenuOpen)} className="bg-transparent text-white px-4 py-2 cursor-pointer flex items-center text-xs md:text-sm">
             {language === "en" ? "English" : "Indonesia"}

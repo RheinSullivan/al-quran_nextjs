@@ -1,7 +1,6 @@
 import { English } from "@/language/English";
 import { Indonesian } from "@/language/Indonesian";
 import React, { useCallback, useEffect, useState } from "react";
-import { FaBookQuran } from "react-icons/fa6";
 import { RiDeleteBack2Fill } from "react-icons/ri";
 
 type Surah = {
@@ -38,9 +37,9 @@ export default function Bookmarks({ nomorSurah, language }: BookmarksProps) {
 
   return (
     <section className="pt-32 pb-10 md:mx-10 pl-16 text-white" id="bookmark">
-      <div className="flex-1 p-4">
-        <div className="container mx-auto md:max-w-screen-2xl h-full">
-          <main className="w-full max-h-[1100px] bg-dark p-7 rounded-xl overflow-y-scroll space-y-4">
+      <div className="flex-1 md:p-4">
+        <div className="container max-w-screen-lg md:max-w-screen-2xl h-full">
+          <main className="w-full max-h-[1100px] bg-dark p-3 md:p-7 rounded-xl overflow-y-scroll space-y-4">
             {surah.ayat.slice(0, 10).map((ayat) => (
               <div key={ayat.nomorAyat} className="flex flex-col gap-5 rounded-lg p-4 bg-dark2 border border-gray-600">
                 {/* Pada bagian ini akan muncul ketika tidak ada data yang di simpan */}
@@ -56,9 +55,8 @@ export default function Bookmarks({ nomorSurah, language }: BookmarksProps) {
                     <span className="text-lg">Ayat - {ayat.nomorAyat}</span>
                   </div>
                   <div className="flex gap-3 mt-5 md:mt-0">
-                    <button className="flex space-x-3 hover:text-green-500 items-center hover:bg-dark text-dark bg-green-500 p-2 px-4 rounded-lg">
-                      <FaBookQuran size={20} />
-                      <span className="text-lg pt-[2px]">{language === "en" ? English.bookmarks.buttonText : Indonesian.bookmarks.buttonText}</span>
+                    <button className="flex md:space-x-3 hover:text-green-500 items-center text-white text-sm md:text-lg pt-[2px] py-2 px-4 rounded-lg">
+                      <span className="">{language === "en" ? English.bookmarks.buttonText : Indonesian.bookmarks.buttonText}</span>
                     </button>
                     <button className="text-red p-3 hover:rounded-full hover:bg-red hover:text-dark">
                       <RiDeleteBack2Fill size={25} />

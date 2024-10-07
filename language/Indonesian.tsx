@@ -18,29 +18,16 @@ export const Indonesian = {
       { images: SVG4, title: "Terakhir Baca", href: "bookmarks", spacing: true },
       {
         images: SVG5,
-        title: "Jadwal Shalat",
-        href: "shalat-times",
+        title: "Jadwal & Panduan Shalat",
         submenu: true,
         submenuItems: [
           {
-            href: "fjr",
-            title: "Shalat Shubuh",
+            href: "shalat-times",
+            title: "Jadwal Shalat",
           },
           {
-            href: "dhuhr",
-            title: "Shalat Dzuhur",
-          },
-          {
-            href: "asr",
-            title: "Shalat Ashar",
-          },
-          {
-            href: "maghrib",
-            title: "Shalat Maghrib",
-          },
-          {
-            href: "isha",
-            title: "Shalat Isya",
+            href: "prayer-guide",
+            title: "Panduan Shalat",
           },
         ],
       },
@@ -88,5 +75,7 @@ export const Indonesian = {
       { paragraph: "Aku berniat melakukan salat fardu maghrib tiga rakaat, sambil menghadap kiblat, saat ini, karena Allah ta'ala." },
       { paragraph: "Aku berniat melakukan salat fardu isya empat rakaat, sambil menghadap kiblat, saat ini, karena Allah ta'ala." },
     ],
+    load: "Memuat waktu shalat ...",
+    buttonText: "Cari Masjid",
   },
 };
