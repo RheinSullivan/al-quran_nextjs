@@ -54,7 +54,7 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
         </div>
       </div>
       <div className="flex items-center space-x-3 pr-2 md:pr-14">
-        <a href="#" className="hidden md:flex bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-green-600 hover:text-white">
+        <a href="https://donasi.baznas.go.id/donasi/bantumuslimdipalestina" className="hidden md:flex bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-green-600 hover:text-white">
           {language === "en" ? English.header.buttonText : Indonesian.header.buttonText}
         </a>
         <div className="relative" ref={menuRef}>

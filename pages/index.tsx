@@ -16,7 +16,7 @@ export default function IndexPage({ language }: { language: string }) {
             <h3 className="md:text-xl pt-5">{language === "en" ? English.index.subTitle : Indonesian.index.subTitle}</h3>
           </div>
           <div className="flex flex-col justify-center items-center text-sm md:text-xl">
-            <a href="#" className="flex md:hidden bg-gray-200 text-black mt-10 px-4 py-2 rounded-md hover:bg-green-600 hover:text-white">
+            <a href="https://donasi.baznas.go.id/donasi/bantumuslimdipalestina" className="flex md:hidden bg-gray-200 text-black mt-10 px-4 py-2 rounded-md hover:bg-green-600 hover:text-white">
               {language === "en" ? English.header.buttonText : Indonesian.header.buttonText}
             </a>
             <button className="hover:bg-gray-200 py-2 px-4 hover:text-green-600 mt-5 rounded-md bg-green-600 text-white">{language === "en" ? English.index.buttonTitle : Indonesian.index.buttonTitle}</button>
