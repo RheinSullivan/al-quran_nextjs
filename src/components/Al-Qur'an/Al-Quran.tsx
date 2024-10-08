@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
-import { FaRegHeart, FaHeart } from "react-icons/fa6"; // Add FaHeart for pinned state
+import { FaRegHeart, FaHeart } from "react-icons/fa6";
 
 export type Surah = {
   nomor: number;
@@ -14,10 +14,9 @@ export default function AlQuran() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [isMax, setIsMax] = useState(false);
-  const [pinnedSurah, setPinnedSurah] = useState<number[]>([]); // State to store pinned Surahs
+  const [pinnedSurah, setPinnedSurah] = useState<number[]>([]);
   const itemsPerPage = 9;
 
-  // Fetch all Surahs
   const fetchSurah = useCallback(async () => {
     setLoading(true);
     try {
@@ -30,24 +29,24 @@ export default function AlQuran() {
     setLoading(false);
   }, []);
 
-  // Load pinned Surahs from localStorage
   useEffect(() => {
-    const storedPinned = localStorage.getItem("pinnedSurah");
-    if (storedPinned) {
-      setPinnedSurah(JSON.parse(storedPinned));
-    }
+    const storedPinned = JSON.parse(localStorage.getItem("pinnedSurah") || "[]");
+    setPinnedSurah(storedPinned.map((surah: Surah) => surah.nomor));
     fetchSurah();
   }, [fetchSurah]);
 
-  // Save pinned Surahs to localStorage
-  const savePinnedSurahs = (surahNumber: number) => {
-    let updatedPinned = [];
-    if (pinnedSurah.includes(surahNumber)) {
-      updatedPinned = pinnedSurah.filter((num) => num !== surahNumber); // Unpin if already pinned
+  const savePinnedSurahs = (surah: Surah) => {
+    const storedPinned = JSON.parse(localStorage.getItem("pinnedSurah") || "[]");
+
+    let updatedPinned;
+    if (storedPinned.find((s: Surah) => s.nomor === surah.nomor)) {
+      updatedPinned = storedPinned.filter((s: Surah) => s.nomor !== surah.nomor);
     } else {
-      updatedPinned = [...pinnedSurah, surahNumber]; // Pin if not already pinned
+      updatedPinned = [...storedPinned, surah];
+      setAllSurah((prev) => [...prev, surah]);
     }
-    setPinnedSurah(updatedPinned);
+
+    setPinnedSurah(updatedPinned.map((s: Surah) => s.nomor));
     localStorage.setItem("pinnedSurah", JSON.stringify(updatedPinned));
   };
 
@@ -74,8 +73,7 @@ export default function AlQuran() {
               <div className="flex bg-green-600/20 rounded-full w-10 h-10 items-center justify-center text-center">
                 <p className="text-lg md:text-xl text-green-400 font-bold">{surah.nomor}.</p>
               </div>
-              {/* Button for pinning/unpinning */}
-              <button className="text-red text-3xl md:text-4xl" onClick={() => savePinnedSurahs(surah.nomor)}>
+              <button className="text-red text-3xl md:text-4xl" onClick={() => savePinnedSurahs(surah)}>
                 {pinnedSurah.includes(surah.nomor) ? <FaHeart /> : <FaRegHeart />}
               </button>
             </div>
@@ -89,7 +87,7 @@ export default function AlQuran() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center md:text-xl pl-14 md:pl-0 mt-16">
+      <div className="flex justify-center md:text-xl pl-14  mt-16">
         {loading ? (
           <button disabled className="bg-sky-500 px-4 py-2 rounded-md">
             Loading...

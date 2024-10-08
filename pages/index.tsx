@@ -27,7 +27,7 @@ export default function IndexPage({ language }: { language: string }) {
         <AlQuran />
       </main>
       <main id="bookmarks">
-        <Bookmarks language={language} nomorSurah={2} />
+        <Bookmarks language={language} />
       </main>
       <main id="shalat-times">
         <Shalat language={language} />
