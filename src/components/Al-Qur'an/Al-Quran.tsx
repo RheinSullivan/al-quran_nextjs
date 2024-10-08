@@ -73,7 +73,7 @@ export default function AlQuran() {
               <div className="flex bg-green-600/20 rounded-full w-10 h-10 items-center justify-center text-center">
                 <p className="text-lg md:text-xl text-green-400 font-bold">{surah.nomor}.</p>
               </div>
-              <button className="text-red text-3xl md:text-4xl" onClick={() => savePinnedSurahs(surah)}>
+              <button className="text-red text-2xl md:text-3xl" onClick={() => savePinnedSurahs(surah)}>
                 {pinnedSurah.includes(surah.nomor) ? <FaHeart /> : <FaRegHeart />}
               </button>
             </div>
