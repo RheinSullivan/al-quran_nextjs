@@ -152,7 +152,7 @@ export default function Shalat({ language }: { language: string }) {
                   </div>
                   <div className="flex gap-16" aria-label="Waktu salat isya hari ini">
                     <div className="flex flex-col justify-center items-center xl:items-start">
-                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[4].title : Indonesian.shalat.times[5].title}</span>
+                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[4].title : Indonesian.shalat.times[4].title}</span>
                       <span className="text-3xl font-bold">{prayerTimes.Isha}</span>
                       <div className="lg:hidden my-8 w-[155px] h-[1px] bg-gradient-to-r from-dark via-sky-600 to-dark"></div>
                     </div>
