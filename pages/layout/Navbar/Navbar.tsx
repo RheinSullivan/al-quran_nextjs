@@ -7,12 +7,12 @@ import { English } from "@/language/English";
 import { Indonesian } from "@/language/Indonesian";
 import Logo from "@/public/assets/svg/1.svg";
 
-interface SubmenuItem {
+type SubmenuItem = {
   href: string;
   title: string;
 }
 
-interface MenuItem {
+type MenuItem = {
   images: string;
   title: string;
   href?: string;

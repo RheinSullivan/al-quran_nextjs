@@ -3,23 +3,24 @@ import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { English } from "@/language/English";
 import { Indonesian } from "@/language/Indonesian";
+import ShalatTimes from "./ShalatTimes";
 
-interface LocationState {
+type LocationState = {
   city: string;
   lat: number;
   lon: number;
-}
+};
 
-interface PrayerTimes {
+type PrayerTimes = {
   Fajr: string;
   Dhuhr: string;
   Asr: string;
   Maghrib: string;
   Isha: string;
   [key: string]: string;
-}
+};
 
-interface OpenStreetMapResponse {
+type OpenStreetMapResponse = {
   address: {
     city?: string;
     town?: string;
@@ -27,7 +28,7 @@ interface OpenStreetMapResponse {
     country?: string;
     road?: string;
   };
-}
+};
 
 export default function Shalat({ language }: { language: string }) {
   const [location, setLocation] = useState<LocationState>({
@@ -120,7 +121,7 @@ export default function Shalat({ language }: { language: string }) {
                 <>
                   <div className="flex gap-16" aria-label="Waktu salat subuh hari ini">
                     <div className="flex flex-col justify-center items-center xl:items-start">
-                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[0].title : Indonesian.shalat.times[0].title}</span>
+                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[1].title : Indonesian.shalat.times[1].title}</span>
                       <span className="text-3xl font-bold">{prayerTimes.Fajr}</span>
                       <div className="lg:hidden my-8 w-[155px] h-[1px] bg-gradient-to-r from-dark via-sky-600 to-dark"></div>
                     </div>
@@ -128,7 +129,7 @@ export default function Shalat({ language }: { language: string }) {
                   </div>
                   <div className="flex gap-16" aria-label="Waktu salat dzuhur hari ini">
                     <div className="flex flex-col justify-center items-center xl:items-start">
-                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[1].title : Indonesian.shalat.times[1].title}</span>
+                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[2].title : Indonesian.shalat.times[2].title}</span>
                       <span className="text-3xl font-bold">{prayerTimes.Dhuhr}</span>
                       <div className="lg:hidden my-8 w-[155px] h-[1px] bg-gradient-to-r from-dark via-sky-600 to-dark"></div>
                     </div>
@@ -136,7 +137,7 @@ export default function Shalat({ language }: { language: string }) {
                   </div>
                   <div className="flex gap-16" aria-label="Waktu salat ashar hari ini">
                     <div className="flex flex-col justify-center items-center xl:items-start">
-                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[2].title : Indonesian.shalat.times[2].title}</span>
+                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[3].title : Indonesian.shalat.times[3].title}</span>
                       <span className="text-3xl font-bold">{prayerTimes.Asr}</span>
                       <div className="lg:hidden my-8 w-[155px] h-[1px] bg-gradient-to-r from-dark via-sky-600 to-dark"></div>
                     </div>
@@ -144,7 +145,7 @@ export default function Shalat({ language }: { language: string }) {
                   </div>
                   <div className="flex gap-16" aria-label="Waktu salat maghrib hari ini">
                     <div className="flex flex-col justify-center items-center xl:items-start">
-                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[3].title : Indonesian.shalat.times[3].title}</span>
+                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[4].title : Indonesian.shalat.times[4].title}</span>
                       <span className="text-3xl font-bold">{prayerTimes.Maghrib}</span>
                       <div className="lg:hidden my-8 w-[155px] h-[1px] bg-gradient-to-r from-dark via-sky-600 to-dark"></div>
                     </div>
@@ -152,7 +153,7 @@ export default function Shalat({ language }: { language: string }) {
                   </div>
                   <div className="flex gap-16" aria-label="Waktu salat isya hari ini">
                     <div className="flex flex-col justify-center items-center xl:items-start">
-                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[4].title : Indonesian.shalat.times[4].title}</span>
+                      <span className="text-xl font-normal">{language === "en" ? English.shalat.times[5].title : Indonesian.shalat.times[5].title}</span>
                       <span className="text-3xl font-bold">{prayerTimes.Isha}</span>
                       <div className="lg:hidden my-8 w-[155px] h-[1px] bg-gradient-to-r from-dark via-sky-600 to-dark"></div>
                     </div>
@@ -175,6 +176,9 @@ export default function Shalat({ language }: { language: string }) {
             </Link>
           </div>
         </div>
+      </main>
+      <main>
+        <ShalatTimes language={language} />
       </main>
     </section>
   );
