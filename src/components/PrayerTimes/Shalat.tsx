@@ -155,9 +155,7 @@ export default function Shalat({ language }: { language: string }) {
                     <div className="flex flex-col justify-center items-center xl:items-start">
                       <span className="text-xl font-normal">{language === "en" ? English.shalat.times[5].title : Indonesian.shalat.times[5].title}</span>
                       <span className="text-3xl font-bold">{prayerTimes.Isha}</span>
-                      <div className="lg:hidden my-8 w-[155px] h-[1px] bg-gradient-to-r from-dark via-sky-600 to-dark"></div>
                     </div>
-                    <div className="hidden lg:flex lg:h-[155px] lg:w-[1.5px] bg-gradient-to-b from-dark via-sky-600 to-dark"></div>
                   </div>
                 </>
               ) : (
