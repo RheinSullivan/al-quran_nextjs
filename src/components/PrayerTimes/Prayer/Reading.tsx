@@ -74,8 +74,8 @@ export default function Reading({ language }: { language: string }) {
   ];
 
   return (
-    <main className="py-10 h-full w-full flex max-w-screen-xl">
-      <div className="flex flex-col h-full w-full py-[60px] pl-3 2xl:pl-20">
+    <main className="py-10 h-full w-full flex max-w-screen-xl justify-center items-center">
+      <div className="flex flex-col h-full w-full py-[60px] pl-3 xl:pl-24">
         <div className="text-center pb-20 space-y-5 text-white">
           <h2 className="md:text-4xl font-semibold">{language === "en" ? English.shalat.guide.title : Indonesian.shalat.guide.title}</h2>
           <p className="md:text-xl">{language === "en" ? English.shalat.subTitle : Indonesian.shalat.subTitle}</p>
@@ -84,14 +84,12 @@ export default function Reading({ language }: { language: string }) {
           {prayerData.map((prayer, index) => (
             <div key={index} className="flex flex-col p-5 md:p-10 bg-dark rounded-xl">
               <div className="flex flex-col relative justify-evenly items-center w-full pb-16">
-                <span className="flex relative justify-center items-center">
-                  <div className="flex justify-center items-center text-center pb-11">
-                    <p className="text-sm md:text-2xl font-semibold">
-                      {prayer.heading}
-                      {prayer.optional && <p className="text-xs md:text-base">{language === "en" ? "(Optional)" : "(Opsional)"}</p>}
-                    </p>
-                  </div>
-                </span>
+                <div className="flex relative justify-center items-center text-center pb-11">
+                  <p className="text-sm md:text-2xl font-semibold">
+                    {prayer.heading}
+                    {prayer.optional && <p className="text-xs md:text-base">{language === "en" ? "(Optional)" : "(Opsional)"}</p>}
+                  </p>
+                </div>
                 <h2 className="text-2xl md:text-3xl text-center ml-auto leading-loose tracking-wide">{prayer.arabic}</h2>
               </div>
               <h3 className="md:text-2xl italic tracking-wide">{prayer.latin}</h3>

@@ -20,40 +20,38 @@ export default function Fajr({ language }: { language: string }) {
   ];
 
   return (
-    <main className="py-10 h-full w-full flex max-w-screen-xl">
-      <div className="flex flex-col h-full w-full py-[60px] pl-3 2xl:pl-20">
+    <main className="py-10 h-full w-full flex max-w-screen-xl justify-center items-center">
+      <div className="flex flex-col h-full w-full py-[60px] pl-3 xl:pl-24">
         <div className="grid grid-cols-1 gap-4 mt-5 space-y-3 rounded-lg md:h-[550px] overflow-y-scroll text-white">
           {prayerData.map((times, index) => (
             <div key={index} className="flex flex-col p-5 md:p-10 bg-dark rounded-xl">
               <div className="flex flex-col relative justify-evenly items-center w-full pb-16">
-                <span className="flex relative justify-center items-center">
-                  <div className="flex justify-center items-center text-center pb-11">
-                    <p className="text-sm md:text-2xl font-semibold">{times.heading}</p>
-                  </div>
-                </span>
+                <div className="flex relative justify-center items-center text-center pb-11">
+                  <p className="text-sm md:text-2xl font-semibold">{times.heading}</p>
+                </div>
                 <h2 className="text-2xl md:text-3xl text-center ml-auto leading-loose tracking-wide">{times.arabic}</h2>
               </div>
               <h3 className="md:text-2xl italic tracking-wide">{times.latin}</h3>
               <p className="text-xs text-green-500 pt-5 mb-10 md:text-base leading-relaxed">
-                <span className="text-lg text-white">{language === "en" ? "Meaning:" : "Artinya:"}</span>
+                <p className="text-lg text-white -mb-3">{language === "en" ? "Meaning:" : "Artinya:"}</p>
                 <br />
                 {times.meaning}
               </p>
-              <div className="flex flex-col relative w-full pt-5">
+              <div className="flex relative w-full pt-5">
                 {times.imamMakmum && (
-                  <span className="flex relative flex-col">
+                  <span className="flex flex-col">
                     <h2 className="md:text-xl text-start">
-                      <span className="text-2xl md:text-3xl">{language === "en" ? English.shalat.intentionArab[17].imamArab : Indonesian.shalat.intentionArab[17].imamArab}</span>
+                      <p className="text-2xl md:text-3xl -mb-5">{language === "en" ? English.shalat.intentionArab[17].imamArab : Indonesian.shalat.intentionArab[17].imamArab}</p>
                       <br />
                       {language === "en" ? English.shalat.intentionLatin[17].imamLatin : Indonesian.shalat.intentionLatin[17].imamLatin}
                     </h2>
-                    <h2 className="md:text-xl text-start mt-7">
-                      <span className="mb-3 text-2x md:text-3xl">{language === "en" ? English.shalat.intentionArab[18].makmumArab : Indonesian.shalat.intentionArab[18].makmumArab}</span>
+                    <h2 className="md:text-xl text-start my-10">
+                      <p className="text-2xl md:text-3xl -mb-5">{language === "en" ? English.shalat.intentionArab[18].makmumArab : Indonesian.shalat.intentionArab[18].makmumArab}</p>
                       <br />
                       {language === "en" ? English.shalat.intentionLatin[18].makmumLatin : Indonesian.shalat.intentionLatin[18].makmumLatin}
                     </h2>
                     <p className="text-xs text-green-500 pt-5 mb-10 md:text-base leading-relaxed">
-                      <span className="text-lg text-white">{language === "en" ? "Meaning:" : "Artinya:"}</span>
+                      <p className="text-lg text-white -mb-3">{language === "en" ? "Meaning:" : "Artinya:"}</p>
                       <br />
                       Imam: {language === "en" ? English.shalat.meaning[17].meaningImam : Indonesian.shalat.meaning[17].meaningImam}
                       <br />

@@ -89,16 +89,16 @@ export default function ShalatTimes({ language }: ShalatTimesProps) {
           <Fajr language={language} />
         </main>
         <main className={slideTab === 3 ? "block" : "hidden"} id="dhuhr">
-          <Dhuhr />
+          <Dhuhr language={language} />
         </main>
         <main className={slideTab === 4 ? "block" : "hidden"} id="asr">
-          <Asr />
+          <Asr language={language}/>
         </main>
         <main className={slideTab === 5 ? "block" : "hidden"} id="maghrib">
-          <Maghrib />
+          <Maghrib language={language} />
         </main>
         <main className={slideTab === 6 ? "block" : "hidden"} id="isha">
-          <Isha />
+          <Isha language={language}/>
         </main>
       </div>
     </section>
