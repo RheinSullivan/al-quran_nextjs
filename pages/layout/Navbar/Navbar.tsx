@@ -10,7 +10,7 @@ import Logo from "@/public/assets/svg/1.svg";
 type SubmenuItem = {
   href: string;
   title: string;
-}
+};
 
 type MenuItem = {
   images: string;
@@ -19,7 +19,7 @@ type MenuItem = {
   submenu?: boolean;
   submenuItems?: SubmenuItem[];
   spacing?: boolean;
-}
+};
 
 export default function Navbar({ language }: { language: string }) {
   const [open, setOpen] = useState(false);
@@ -50,9 +50,12 @@ export default function Navbar({ language }: { language: string }) {
   };
 
   return (
-    <nav ref={navRef} className={`${open ? "w-[275px] md:w-[325px]" : "w-16 md:w-20"} z-20 bg-dark fixed h-screen p-5 pt-3 duration-300`}>
-      <RiArrowLeftSLine onClick={() => setOpen(!open)} className={`${!open && "rotate-180"} bg-dark text-white text-3xl rounded-full absolute -right-3 top-4 border border-dark cursor-pointer`} />
-      <div className="inline-flex items-center">
+    <nav ref={navRef} className={`${open ? "w-[275px] md:w-[325px]" : "w-16 md:w-20"} border-r border-gray-600 z-20 bg-dark fixed h-screen p-5 pt-3 duration-300`}>
+      <RiArrowLeftSLine
+        onClick={() => setOpen(!open)}
+        className={`${!open && "rotate-180"} ${open ? "border-r border-l-0 border-gray-600" : "border-l border-r-0 border-gray-600"} bg-dark text-white text-3xl rounded-full absolute -right-3 top-4 cursor-pointer`}
+      />
+      <div className="inline-flex items-center pt-3">
         <Image src={Logo} alt="Logo Cover Al-Qur'an" className={`${open ? "justify-start ml-0" : "justify-center -ml-3 md:-ml-[11px]"} w-12 md:w-16 duration-300 text-4xl rounded cursor-pointer float-left`} />
         <h1 className={`${!open ? "scale-0" : ""} text-white origin-left font-medium md:text-xl duration-300 ml-2`}>
           {language === "en" ? English.navbar.logoText : Indonesian.navbar.logoText} <br />
@@ -98,7 +101,7 @@ export default function Navbar({ language }: { language: string }) {
                   {menu.submenuItems?.map((submenu, subIndex) => (
                     <li
                       key={subIndex}
-                      className="text-white flex items-center gap-x-5 cursor-pointer ml-10 p-3 px-5 hover:bg-dark2 rounded-md"
+                      className="text-white flex items-center gap-x-5 cursor-pointer ml-11 p-3 px-5 hover:bg-dark2 rounded-md"
                       onClick={(e) => {
                         if (submenu.href) {
                           handleScroll(e as React.MouseEvent<HTMLLIElement>, submenu.href);

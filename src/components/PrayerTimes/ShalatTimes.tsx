@@ -61,7 +61,7 @@ export default function ShalatTimes({ language }: ShalatTimesProps) {
     <section className="h-full w-full min-h-screen justify-center items-center p-5 lg:p-10 text-white" id="prayer-guide">
       <div className="pt-24 pl-12 md:pl-20 pb-16">
         <main className="flex flex-wrap justify-center items-center pl-4 md:pl-0">
-          <div className="w-full md:w-[70%] overflow-x-scroll py-4 px-3 bg-dark rounded-lg">
+          <div className="w-full md:w-[70%] overflow-x-scroll p-3 bg-dark rounded-lg border border-gray-600">
             <ul className="flex mb-0 list-none md:flex-row" role="tablist">
               {prayerMenu.map((menu, index) => (
                 <li key={index} className="-mb-px mr-3 last:mr-0 flex-auto text-center">
@@ -92,13 +92,13 @@ export default function ShalatTimes({ language }: ShalatTimesProps) {
           <Dhuhr language={language} />
         </main>
         <main className={slideTab === 4 ? "block" : "hidden"} id="asr">
-          <Asr language={language}/>
+          <Asr language={language} />
         </main>
         <main className={slideTab === 5 ? "block" : "hidden"} id="maghrib">
           <Maghrib language={language} />
         </main>
         <main className={slideTab === 6 ? "block" : "hidden"} id="isha">
-          <Isha language={language}/>
+          <Isha language={language} />
         </main>
       </div>
     </section>

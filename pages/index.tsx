@@ -4,13 +4,24 @@ import AlQuran from "@/src/components/Al-Qur'an/Al-Quran";
 import Bookmarks from "@/src/components/LastRead/Bookmarks";
 import Footer from "@/pages/layout/Footer.tsx/Footer";
 import Shalat from "@/src/components/PrayerTimes/Shalat";
+import Navbar from "./layout/Navbar/Navbar";
+import Header from "./layout/Header/Header";
+import { useState } from "react";
 
-export default function IndexPage({ language }: { language: string }) {
+export default function IndexPage() {
+  const [language, setLanguage] = useState("en");
+
   return (
     <section id="home">
+      <main>
+        <Header onLanguageChange={setLanguage} />
+      </main>
+      <main>
+        <Navbar language={language} />
+      </main>
       <main className="flex flex-col bg-kabah bg-cover bg-center backdrop-blur h-screen w-screen items-center justify-center">
-        <div className="text-center pl-14 md:pl-0 py-72 md:py-64 text-white">
-          <div className="px-4 py-3 text-outline rounded-lg">
+        <div className="text-center pl-14 md:pl-0 py-60 md:py-64 text-white">
+          <div className="text-outline">
             <h1 className="text-2xl md:text-5xl">ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ</h1>
             <p className="md:text-2xl font-bold italic text-outline">Akhi/Ukhti</p>
             <h3 className="md:text-xl pt-5">{language === "en" ? English.index.subTitle : Indonesian.index.subTitle}</h3>

@@ -45,7 +45,7 @@ export default function Header({ onLanguageChange }: { onLanguageChange: (langua
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 w-full py-3 md:px-6 z-10 flex justify-between items-center transition-all duration-300 ${scrolled ? "bg-dark/50 backdrop-blur" : "bg-transparent"}`}>
+    <header className={`fixed top-0 left-0 w-full py-3 md:px-6 z-10 flex justify-between items-center transition-all duration-300 ${scrolled ? "bg-dark/50 backdrop-blur border-b border-gray-600" : "bg-transparent"}`}>
       <div className="flex items-center pl-20 md:pl-28">
         <Image src={Logo} alt="Logo Al-Qur'an" className="w-[45px] md:w-[70px] mr-3" />
         <div className="text-white">

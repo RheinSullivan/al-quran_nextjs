@@ -1,3 +1,4 @@
+import HeaderSurah from "@/src/DetailSurah/HeaderSurah";
 import Surah from "@/src/DetailSurah/Surah";
 import { useRouter } from "next/router";
 
@@ -7,7 +8,12 @@ const SurahPage = () => {
 
   if (!nomor) return null;
 
-  return <Surah nomorSurah={parseInt(nomor as string, 10)} />;
+  return (
+    <>
+      <HeaderSurah />
+      <Surah nomorSurah={parseInt(nomor as string, 10)} />
+    </>
+  );
 };
 
 export default SurahPage;
